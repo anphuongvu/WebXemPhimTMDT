@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3632b1e9a53045c192bfec13a7b4a224" Name="Diagram1">
+        <EntityTypeShape EntityType="QLXemPhimModel.Admin" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.BanQuyenPhim" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.BinhLuan" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.ChiTietDonMuaLe" Width="1.5" PointX="8.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.ChuDe" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.ChuDe_Phim" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.DienVien" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.DonMuaGoiPhim" Width="1.5" PointX="8.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.DonMuaPhimLe" Width="1.5" PointX="5.25" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.GoiPhim" Width="1.5" PointX="6" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.KhachHang" Width="1.5" PointX="6" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.LichSuXemPhim" Width="1.5" PointX="7.5" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.LoaiTaiKhoan" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.PhanQuyen" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.Phim" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.QuangCao" Width="1.5" PointX="5.25" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.QuocGia" Width="1.5" PointX="0.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.sysdiagram" Width="1.5" PointX="8.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.TaiKhoan" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.TapPhim" Width="1.5" PointX="5.25" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.TheLoai" Width="1.5" PointX="0.75" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.ThongKeDoanhThu" Width="1.5" PointX="7.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.Trailer" Width="1.5" PointX="5.25" PointY="31.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLXemPhimModel.Voucher" Width="1.5" PointX="3" PointY="19.375" IsExpanded="true" />
+        <AssociationConnector Association="QLXemPhimModel.FK_Admin_TaiKhoan" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_ThongKeDoanhThu_Admin" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_Phim_BanQuyenPhim" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_BinhLuan_Phim" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_BinhLuan_TaiKhoan" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_ChiTietDonMuaLe_DonMuaPhimLe1" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_ChiTietDonMuaLe_KhachHang1" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_ChiTietDonMuaLe_Phim" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_ChiTietDonMuaLe_TaiKhoan" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_ChiTietDonMuaLe_Voucher" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_ChuDe_Phim_ChuDe" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_ChuDe_Phim_Phim" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_DonMuaGoiPhim_GoiPhim" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_DonMuaGoiPhim_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_DonMuaGoiPhim_TaiKhoan" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_DonMuaGoiPhim_Voucher" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_DonMuaPhimLe_Phim" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_DonMuaPhimLe_TaiKhoan" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_DonMuaPhimLe_Voucher" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_KhachHang_TaiKhoan" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_LichSuXemPhim_TaiKhoan" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_LichSuXemPhim_TapPhim" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_TaiKhoan_LoaiTaiKhoan" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_TaiKhoan_PhanQuyen" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_Phim_QuocGia" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_Phim_TheLoai" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_Phim_Trailer" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_TapPhim_Phim" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.FK_Trailer_Phim" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.DienVien_Phim" ManuallyRouted="false" />
+        <AssociationConnector Association="QLXemPhimModel.QC_Phim" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

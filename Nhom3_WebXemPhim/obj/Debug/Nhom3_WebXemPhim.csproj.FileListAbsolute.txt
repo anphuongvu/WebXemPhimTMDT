@@ -77,3 +77,7 @@ E:\Năm 4\TMDT\Nhom3_WebXemPhim\Nhom3_WebXemPhim\obj\Debug\Nhom3_WebXemPhim.cspr
 E:\Năm 4\TMDT\Nhom3_WebXemPhim\Nhom3_WebXemPhim\obj\Debug\Nhom3_WebXemPhim.csproj.CopyComplete
 E:\Năm 4\TMDT\Nhom3_WebXemPhim\Nhom3_WebXemPhim\obj\Debug\Nhom3_WebXemPhim.dll
 E:\Năm 4\TMDT\Nhom3_WebXemPhim\Nhom3_WebXemPhim\obj\Debug\Nhom3_WebXemPhim.pdb
+E:\Năm 4\TMDT\Nhom3_WebXemPhim\Nhom3_WebXemPhim\bin\EntityFramework.dll
+E:\Năm 4\TMDT\Nhom3_WebXemPhim\Nhom3_WebXemPhim\bin\EntityFramework.SqlServer.dll
+E:\Năm 4\TMDT\Nhom3_WebXemPhim\Nhom3_WebXemPhim\bin\EntityFramework.xml
+E:\Năm 4\TMDT\Nhom3_WebXemPhim\Nhom3_WebXemPhim\bin\EntityFramework.SqlServer.xml
