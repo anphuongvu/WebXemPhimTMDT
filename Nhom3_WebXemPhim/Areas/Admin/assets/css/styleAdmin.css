@@ -171,3 +171,12 @@
     padding-right: 30px;
     color: #fff;
 }
+.main {
+    position: absolute;
+    width: calc(100% - 276px);
+    left: 276px;
+    min-height: 100vh;
+    background: white;
+    transition: 0.5s;
+}
+
