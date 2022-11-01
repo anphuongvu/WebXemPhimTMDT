@@ -132,5 +132,23 @@ namespace Nhom3_WebXemPhim.Areas.Admin.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult DuyetTaiKhoan()
+        {
+            var taiKhoans = db.TaiKhoans.Include(t => t.LoaiTaiKhoan).Include(t => t.PhanQuyen);
+            return View(taiKhoans.ToList());
+        }
+
+        public ActionResult XoaTaiKhoan()
+        {
+            var taiKhoans = db.TaiKhoans.Include(t => t.LoaiTaiKhoan).Include(t => t.PhanQuyen);
+            return View(taiKhoans.ToList());
+        }
+
+        public ActionResult CanhBaoTaiKhoan()
+        {
+            var taiKhoans = db.TaiKhoans.Include(t => t.LoaiTaiKhoan).Include(t => t.PhanQuyen);
+            return View(taiKhoans.ToList());
+        }
     }
 }

@@ -325,6 +325,9 @@
     <Content Include="Areas\Admin\Views\GoiPhims\DanhSachGoi.cshtml" />
     <Content Include="Areas\Admin\Views\DonMuaGoiPhims\DonMuaSapHetHan.cshtml" />
     <Content Include="Areas\Admin\Views\ThanhToan\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoans\DuyetTaiKhoan.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoans\XoaTaiKhoan.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoans\CanhBaoTaiKhoan.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
