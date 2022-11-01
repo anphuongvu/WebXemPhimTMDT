@@ -133,6 +133,7 @@
     <Compile Include="Areas\Admin\Controllers\DonMuaGoiPhimsController.cs" />
     <Compile Include="Areas\Admin\Controllers\GoiPhimsController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\KhachHangsController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoaiTaiKhoansController.cs" />
     <Compile Include="Areas\Admin\Controllers\PhimsController.cs" />
     <Compile Include="Areas\Admin\Controllers\QuocGiasController.cs" />
@@ -236,6 +237,8 @@
   <ItemGroup>
     <Content Include="Areas\Admin\assets\css\bootstrap.min.css" />
     <Content Include="Areas\Admin\assets\css\styleAdmin.css" />
+    <Content Include="Areas\Admin\assets\img\phim1.jpg" />
+    <Content Include="Areas\Admin\assets\img\phim2.jpg" />
     <Content Include="Areas\Admin\assets\img\poster1.jpg" />
     <Content Include="Areas\Admin\assets\img\poster2.jpg" />
     <Content Include="Areas\Admin\assets\img\poster3.jpg" />
@@ -328,6 +331,11 @@
     <Content Include="Areas\Admin\Views\TaiKhoans\DuyetTaiKhoan.cshtml" />
     <Content Include="Areas\Admin\Views\TaiKhoans\XoaTaiKhoan.cshtml" />
     <Content Include="Areas\Admin\Views\TaiKhoans\CanhBaoTaiKhoan.cshtml" />
+    <Content Include="Areas\Admin\Views\KhachHangs\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\KhachHangs\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\KhachHangs\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\KhachHangs\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\KhachHangs\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -356,6 +364,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\assets\video\" />
     <Folder Include="Areas\Admin\Data\" />
   </ItemGroup>
   <ItemGroup>
