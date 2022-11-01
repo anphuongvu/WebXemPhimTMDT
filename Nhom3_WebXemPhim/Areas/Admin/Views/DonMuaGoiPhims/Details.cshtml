@@ -1,0 +1,75 @@
+﻿@model Nhom3_WebXemPhim.Models.DonMuaGoiPhim
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DonMuaGoiPhim</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ThoiGian)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThoiGian)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TongTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TongTien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrangThai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoiPhim.LoaiGoiPhim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoiPhim.LoaiGoiPhim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KhachHang.TenKhachHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhachHang.TenKhachHang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaiKhoan.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaiKhoan.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Voucher.TenVoucher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Voucher.TenVoucher)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaDonMuaGoi }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

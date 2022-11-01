@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Nhom3_WebXemPhim.Models.QuocGia>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenQuocGia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenQuocGia)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaQuocGia }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaQuocGia }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaQuocGia })
+        </td>
+    </tr>
+}
+
+</table>

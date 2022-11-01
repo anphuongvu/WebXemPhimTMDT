@@ -17,7 +17,8 @@ namespace Nhom3_WebXemPhim.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { action = "Index", id = UrlParameter.Optional },
+                new[] { "Nhom3_WebXemPhim.Areas.Admin.Controllers" }
             );
         }
     }

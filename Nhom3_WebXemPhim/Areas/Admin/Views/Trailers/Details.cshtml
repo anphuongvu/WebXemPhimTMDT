@@ -1,0 +1,51 @@
+﻿@model Nhom3_WebXemPhim.Models.Trailer
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Trailer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenTrailer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTrailer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhAnh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HinhAnh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DuongDanURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DuongDanURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phim.TenPhim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phim.TenPhim)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaTrailer }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

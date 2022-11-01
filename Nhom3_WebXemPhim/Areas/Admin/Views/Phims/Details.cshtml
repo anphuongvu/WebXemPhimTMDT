@@ -1,0 +1,123 @@
+﻿@model Nhom3_WebXemPhim.Models.Phim
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Phim</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenPhim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenPhim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenDienVien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenDienVien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhAnhPhim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HinhAnhPhim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MoTaPhim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoTaPhim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThoiLuongPhim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThoiLuongPhim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NamSanXuat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamSanXuat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LuotXem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LuotXem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DuongDanURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DuongDanURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonGia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BanQuyenPhim.ChiTietHopDong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BanQuyenPhim.ChiTietHopDong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuocGia.TenQuocGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuocGia.TenQuocGia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TheLoai.TenTheLoai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TheLoai.TenTheLoai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trailer.TenTrailer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trailer.TenTrailer)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaPhim }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

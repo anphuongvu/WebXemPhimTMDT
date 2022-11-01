@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Nhom3_WebXemPhim.Models.Phim>
+@{
+    ViewBag.Title = "Quản lý phim bộ";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid pb-3">
+    <div class="col-md-12">
+        <h3>Phim bộ</h3>
+    </div>
+    <div class="d-grid gap-3" style="grid-template-columns: 1fr 2fr;">
+        @foreach (var item in Model)
+        {
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/Areas/Admin/assets/img/@Html.DisplayFor(modelItem => item.HinhAnhPhim)" width="100%">
+                </div>
+
+                <div class="col-md-7">
+                    <p>Tên phim: @Html.DisplayFor(modelItem => item.TenPhim) &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Giá tiền phim: @Html.DisplayFor(modelItem => item.DonGia) VND</p>
+                    <p>Thể loại phim: @Html.DisplayFor(modelItem => item.TheLoai.TenTheLoai)</p>
+                    <p>Phim bản quyền: <a class="btn btn-outline-primary rounded-pill" href="#">@Html.DisplayFor(modelItem => item.BanQuyenPhim.ChiTietHopDong.Length)</a> </p>
+                    <p>Tên các diễn viên: <a href="#">@Html.DisplayFor(modelItem => item.TenDienVien)</a></p>
+                    <p>Thời lượng phim:@Html.DisplayFor(modelItem => item.ThoiLuongPhim) phút&emsp;&emsp;&emsp;Quốc gia: @Html.DisplayFor(modelItem => item.QuocGia.TenQuocGia)&emsp;&emsp;&emsp;Lượt xem: @Html.DisplayFor(modelItem => item.LuotXem) Lượt xem</p>
+
+                    <p>Năm sản xuất: @Html.DisplayFor(modelItem => item.NamSanXuat.Value.Year)&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Ngày công chiếu: @Html.DisplayFor(modelItem => item.NamSanXuat.Value)</p>
+                    <p>Số tập: 12&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Ngày công chiếu của tập: @Html.DisplayFor(modelItem => item.NamSanXuat.Value)</p>
+                </div>
+            </div>
+            <hr>
+        }
+    </div>
+</div>

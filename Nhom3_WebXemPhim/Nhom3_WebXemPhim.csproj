@@ -46,10 +46,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -129,7 +129,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\DienViensController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DonMuaGoiPhimsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\GoiPhimsController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoaiTaiKhoansController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PhimsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QuocGiasController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TaiKhoansController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ThanhToanController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TheLoaisController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TrailersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -224,8 +234,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\assets\css\bootstrap.min.css" />
     <Content Include="Areas\Admin\assets\css\styleAdmin.css" />
+    <Content Include="Areas\Admin\assets\img\poster1.jpg" />
+    <Content Include="Areas\Admin\assets\img\poster2.jpg" />
+    <Content Include="Areas\Admin\assets\img\poster3.jpg" />
     <Content Include="Areas\Admin\assets\img\wootteo.jpg" />
+    <Content Include="Areas\Admin\assets\js\bootstrap.bundle.min.js" />
+    <Content Include="Areas\Admin\assets\js\dashboard.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -244,6 +260,7 @@
       <DependentUpon>DB.edmx</DependentUpon>
       <LastGenOutput>DB.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\QLXemPhim.sql" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\web.config" />
@@ -256,6 +273,58 @@
     <Content Include="Models\DB.edmx.diagram">
       <DependentUpon>DB.edmx</DependentUpon>
     </Content>
+    <Content Include="Areas\Admin\Views\Phims\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Phims\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Phims\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Phims\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Phims\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DienViens\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\DienViens\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\DienViens\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\DienViens\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\DienViens\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TheLoais\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\TheLoais\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\TheLoais\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\TheLoais\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\TheLoais\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Trailers\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Trailers\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Trailers\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Trailers\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Trailers\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\QuocGias\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\QuocGias\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\QuocGias\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\QuocGias\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\QuocGias\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Phims\PhimBo.cshtml" />
+    <Content Include="Areas\Admin\Views\Phims\PhimLe.cshtml" />
+    <Content Include="Areas\Admin\Views\Phims\PhimBanQuyen.cshtml" />
+    <Content Include="Areas\Admin\Views\Phims\PhimFree.cshtml" />
+    <Content Include="Areas\Admin\Views\GoiPhims\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\GoiPhims\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\GoiPhims\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\GoiPhims\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\GoiPhims\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DonMuaGoiPhims\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\DonMuaGoiPhims\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\DonMuaGoiPhims\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\DonMuaGoiPhims\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\DonMuaGoiPhims\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoans\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoans\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoans\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoans\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\TaiKhoans\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiTaiKhoans\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiTaiKhoans\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiTaiKhoans\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiTaiKhoans\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiTaiKhoans\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\GoiPhims\DanhSachGoi.cshtml" />
+    <Content Include="Areas\Admin\Views\DonMuaGoiPhims\DonMuaSapHetHan.cshtml" />
+    <Content Include="Areas\Admin\Views\ThanhToan\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
