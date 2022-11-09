@@ -5,102 +5,110 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Index</h2>
+<div style="margin:20px;">
+    <h2>Danh sách phim</h2>
+    <div style="width:90px; height: 30px; background-color:#f48f41 ; align-content:center; text-align:center; border-radius:5px; margin:20px 0;">
+        <p>
+            @Html.ActionLink("Thêm mới", "Create", null, new { style = "text-decoration:none; color: #fff;text-align:center;" })
+        </p>
+    </div>
+    <div class="table-responsive">
+        <table class="table">
+            <tr>
+                <th>
+                    Tên phim
+                </th>
+                <th>
+                    Tên diễn viên
+                </th>
+                <th>
+                    Hình ảnh phim
+                </th>
+                <th>
+                    Mô tả phim
+                </th>
+                <th>
+                    Thời lượng phim
+                </th>
+                <th>
+                    Năm sản xuất
+                </th>
+                <th>
+                    Lượt xem
+                </th>
+                <th>
+                    Đường dẫn URL
+                </th>
+                <th>
+                    Đơn giá
+                </th>
+                <th>
+                    Chi tiết hợp đồng
+                </th>
+                <th>
+                    Tên quốc gia
+                </th>
+                <th>
+                    Tên thể loại
+                </th>
+                <th>
+                    Tên trailer
+                </th>
+                <th></th>
+            </tr>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TenPhim)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TenDienVien)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HinhAnhPhim)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MoTaPhim)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ThoiLuongPhim)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NamSanXuat)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LuotXem)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DuongDanURL)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DonGia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BanQuyenPhim.ChiTietHopDong)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.QuocGia.TenQuocGia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TheLoai.TenTheLoai)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Trailer.TenTrailer)
-        </th>
-        <th></th>
-    </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenPhim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenDienVien)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HinhAnhPhim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MoTaPhim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ThoiLuongPhim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NamSanXuat)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LuotXem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DuongDanURL)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DonGia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BanQuyenPhim.ChiTietHopDong)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QuocGia.TenQuocGia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TheLoai.TenTheLoai)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Trailer.TenTrailer)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.MaPhim }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.MaPhim }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.MaPhim })
+                    </td>
+                </tr>
+            }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenPhim)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenDienVien)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HinhAnhPhim)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MoTaPhim)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ThoiLuongPhim)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NamSanXuat)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LuotXem)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DuongDanURL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DonGia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BanQuyenPhim.ChiTietHopDong)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.QuocGia.TenQuocGia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TheLoai.TenTheLoai)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Trailer.TenTrailer)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaPhim }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaPhim }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaPhim })
-        </td>
-    </tr>
-}
+        </table>
 
-</table>
+    </div>
+
+</div>
