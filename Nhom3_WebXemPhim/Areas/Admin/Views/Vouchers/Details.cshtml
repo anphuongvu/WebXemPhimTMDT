@@ -5,55 +5,63 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Details</h2>
+<div style="margin:20px;">
+    <h2 style="margin: 0 auto; text-align:center; font-weight:500; color:#f48f41">Thông tin chi tiết</h2>
 
-<div>
-    <h4>Voucher</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.TenVoucher)
-        </dt>
+    <div>
+        <h4>Voucher</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Mã Vourcher
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MaVoucher)
+            </dd>
+            <dt>
+                Tên Voucher
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TenVoucher)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TenVoucher)
-        </dd>
+            <dt>
+                Điều kiện
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DieuKien)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DieuKien)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.DieuKien)
-        </dd>
+            <dt>
+                Ngày áp dụng
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NgayApDung)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.NgayApDung)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.NgayApDung)
-        </dd>
+            <dt>
+               Ngày hết hạn
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NgayHetHan)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.NgayHetHan)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.NgayHetHan)
-        </dd>
+            <dt>
+                Trạng thái
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TrangThai)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TrangThai)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TrangThai)
-        </dd>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaVoucher }) |
+        @Html.ActionLink("Quay lại", "Index")
+    </p>
 
-    </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MaVoucher }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
