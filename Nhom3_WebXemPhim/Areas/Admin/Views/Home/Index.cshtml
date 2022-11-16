@@ -3,8 +3,134 @@
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
+
+<style>
+    /*card box*/
+        .cardBox {
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 30px;
+        }
+        .cardBox .card {
+            position: relative;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+        }
+
+        .cardBox .card .numbers {
+            position: relative;
+            font-weight: 700;
+            font-size: 2.5em;
+            color: #f48f41;
+        }
+        .cardBox .card .cardName {
+            color: #999;
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+        .cardBox .card .iconBx {
+            margin-top: 10px;
+            font-size: 2.2em;
+            color: #999;
+        }
+        .cardBox .card:hover {
+            background: #f48f41;
+        }
+        .cardBox .card:hover .numbers,
+        .cardBox .card:hover .cardName,
+        .cardBox .card:hover .iconBx {
+            color: #fff;
+        }
+    /* charts */
+    .charts {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+        width: 100%;
+        margin-left: 10px;
+    }
+</style>
 <div style="margin:20px;">
-    <h2>Trang chủ Admin</h2>
+    <h3 style="font-weight: 500; color: #f48f41; text-align: center; font-size: 30px;">Trang chủ Admin</h3>
+    <!--cards-->
+    <div class="cardBox">
+        <div class="card">
+            <div>
+                <div class="numbers">50</div>
+                <div class="cardName">Tổng số phim</div>
+            </div>
+            <div class="iconBx">
+                <ion-icon name="eye-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">80</div>
+                <div class="cardName">Tổng đơn đặt</div>
+            </div>
+            <div class="iconBx">
+                <ion-icon name="create-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">285</div>
+                <div class="cardName">Số bình luận</div>
+            </div>
+            <div class="iconBx">
+                <ion-icon name="chatbubbles-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">504</div>
+                <div class="cardName">Tổng truy cập</div>
+            </div>
+            <div class="iconBx">
+                <ion-icon name="happy-outline"></ion-icon>
+            </div>
+        </div>
+    </div>
+    <!-- chart -->
+    <div class="charts">
+        <div class="chart col-12">
+            <h2 style="font-weight: 500; color: #f48f41; font-size: 30px;">Lượt truy cập (thống kê theo tháng)</h2>
+            <canvas id="lineChart" style="width: 100%; height: 450px; margin-right: 20px"></canvas>
+        </div>
+    </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<script>
+    const ctx = document.getElementById('lineChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'],
+            datasets: [{
+                label: 'Lượt xem',
+                data: [1231, 1200, 1513, 992, 1123, 1313, 1034, 1213, 1316, 2342, 1245, 1315],
+                backgroundColor: [
+                    'rgb(215, 142, 78)'
+                ],
+                borderColor: [
+                    'rgb(244, 143, 65)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+</script>
 
 
