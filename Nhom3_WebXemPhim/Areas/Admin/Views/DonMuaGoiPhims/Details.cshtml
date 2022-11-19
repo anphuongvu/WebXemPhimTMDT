@@ -5,71 +5,74 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Details</h2>
+<div style="margin:20px;">
+    <h2>Chi tiết</h2>
 
-<div>
-    <h4>DonMuaGoiPhim</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ThoiGian)
-        </dt>
+    <div>
+        <h4>Đơn mua gói phim</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Thời gian
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ThoiGian)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ThoiGian)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TongTien)
-        </dt>
+            <dt>
+                Tổng tiền
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TongTien)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.TongTien)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TrangThai)
-        </dt>
+            <dt>
+                Trạng thái
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TrangThai)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.TrangThai)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.GoiPhim.LoaiGoiPhim)
-        </dt>
+            <dt>
+                Loại gói phim
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.GoiPhim.LoaiGoiPhim)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.GoiPhim.LoaiGoiPhim)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.KhachHang.TenKhachHang)
-        </dt>
+            <dt>
+                Tên khách hàng
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.KhachHang.TenKhachHang)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.KhachHang.TenKhachHang)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TaiKhoan.Username)
-        </dt>
+            <dt>
+                Username
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TaiKhoan.Username)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.TaiKhoan.Username)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Voucher.TenVoucher)
-        </dt>
+            <dt>
+                Tên Voucher
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Voucher.TenVoucher)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Voucher.TenVoucher)
+            </dd>
 
-    </dl>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Sửa", "Edit", new { id = Model.MaDonMuaGoi }) |
+        @Html.ActionLink("Quay lại", "Index")
+    </p>
+
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MaDonMuaGoi }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
