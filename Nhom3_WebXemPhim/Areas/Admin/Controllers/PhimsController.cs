@@ -29,10 +29,17 @@ namespace Nhom3_WebXemPhim.Areas.Admin.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Phim phim = db.Phims.Find(id);
+
             if (phim == null)
             {
                 return HttpNotFound();
             }
+            phim.LuotXem += 1;
+            db.Entry(phim).State = EntityState.Modified;
+            db.SaveChanges();
+
+            ViewBag.comments = db.BinhLuans.Where(cm => cm.MaPhim == id).ToList();
+
             return View(phim);
         }
 
@@ -162,6 +169,30 @@ namespace Nhom3_WebXemPhim.Areas.Admin.Controllers
         {
             var phims = db.Phims.Include(p => p.BanQuyenPhim).Include(p => p.QuocGia).Include(p => p.TheLoai).Include(p => p.Trailer);
             return View(phims.ToList());
+        }
+
+        [HttpPost]
+        public ActionResult CreateComment([Bind(Include = "MaPhim,Ten,Email,NoiDungBinhLuan")] BinhLuan binhLuan)
+        {
+            if (ModelState.IsValid)
+            {
+
+                // set value
+                binhLuan.ThoiGian = DateTime.Now;
+                if (Session["user"] != null)
+                {
+                    binhLuan.MaTaiKhoan = (Session["user"] as TaiKhoan).MaTaiKhoan;
+                }    
+                else
+                {
+                    // Bình luận ẩn danh
+                }    
+
+                db.BinhLuans.Add(binhLuan);
+                db.SaveChanges();
+                return Redirect(Request.UrlReferrer.ToString());
+            }
+            return Redirect(Request.UrlReferrer.ToString());
         }
     }
 }
