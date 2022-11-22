@@ -5,66 +5,72 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Index</h2>
+<div style="margin:20px;">
+    <h2 style="margin: 0 auto; text-align:center; font-weight:500; color:#f48f41">Danh sách đơn mua gói phim</h2>
+    <div style="width:90px; height: 30px; background-color:#f48f41 ; align-content:center; text-align:center; border-radius:5px; margin:20px 0;">
+        <p>
+            @Html.ActionLink("Thêm mới", "Create", null, new { style = "text-decoration:none; color: #fff;text-align:center;" })
+        </p>
+    </div>
+    
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ThoiGian)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TongTien)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrangThai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoiPhim.LoaiGoiPhim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KhachHang.TenKhachHang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaiKhoan.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Voucher.TenVoucher)
+            </th>
+            <th></th>
+        </tr>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ThoiGian)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TongTien)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TrangThai)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GoiPhim.LoaiGoiPhim)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.KhachHang.TenKhachHang)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TaiKhoan.Username)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Voucher.TenVoucher)
-        </th>
-        <th></th>
-    </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ThoiGian)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TongTien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrangThai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GoiPhim.LoaiGoiPhim)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KhachHang.TenKhachHang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TaiKhoan.Username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Voucher.TenVoucher)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.MaDonMuaGoi }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.MaDonMuaGoi }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.MaDonMuaGoi })
+                </td>
+            </tr>
+        }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ThoiGian)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TongTien)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TrangThai)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GoiPhim.LoaiGoiPhim)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.KhachHang.TenKhachHang)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TaiKhoan.Username)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Voucher.TenVoucher)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaDonMuaGoi }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaDonMuaGoi }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaDonMuaGoi })
-        </td>
-    </tr>
-}
+    </table>
 
-</table>
+</div>

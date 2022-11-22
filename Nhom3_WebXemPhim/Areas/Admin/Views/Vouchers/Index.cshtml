@@ -1,0 +1,208 @@
+﻿@model IEnumerable<Nhom3_WebXemPhim.Models.Voucher>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    .row {
+        display: flex;
+    }
+
+    .pagination {
+        display: inline-block;
+    }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+            .pagination a.active {
+                background-color: #f48f41;
+                color: white;
+                border-radius: 5px;
+            }
+
+            .pagination a:hover:not(.active) {
+                background-color: #ddd;
+                border-radius: 5px;
+            }
+</style>
+<div style="margin:20px;">
+    <h2 style="margin: 0 auto; text-align:center; font-weight:500; color:#f48f41">QUẢN LÝ VOUCHER</h2>
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-6">
+            <div style="width:90px; height: 30px; background-color:#f48f41 ; align-content:center; text-align:center; border-radius:5px; margin:20px 0;">
+                <p>
+                    @Html.ActionLink("Thêm mới", "Create", null, new { style = "text-decoration:none; color: #fff;text-align:center;" })
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-4 col-sm-offset-6" style=" align-content: center; text-align: center; justify-content:center">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Tìm kiếm" id="txtSearch" />
+                <div class="input-group-btn">
+                    <button class="btn btn-warning" type="submit" id="btnSearch" style="background-color:#f48f41">
+                        <i class='bx bx-search' style="color:white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table">
+
+        <tr>
+            <th scope="col">#</th>
+            <th>
+                Mã Voucher
+            </th>
+            <th>
+                Tên Voucher
+            </th>
+            <th>
+                Điều kiện
+            </th>
+            <th>
+                Ngày áp dụng
+            </th>
+            <th>
+                Ngày hết hạn
+            </th>
+            <th>
+                Trạng thái
+            </th>
+            <th></th>
+        </tr>
+
+        @{int i = 0;}
+        @foreach (var item in Model)
+        {
+            i++;
+            <tr>
+                <td>@i</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaVoucher)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenVoucher)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DieuKien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayApDung)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayHetHan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrangThai)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.MaVoucher }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.MaVoucher }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.MaVoucher })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<hr />
+<div class="text-right" style="margin-right: 0px;">
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+    </div>
+</div>
+
+<hr />
+<div style="margin:20px;">
+    <div class="row" style="margin-bottom:20px">
+        <div class="col-md-6" style=" display:block">
+            <div class="row">
+                <h4 class="mr-5 ml-3">THỐNG KÊ</h4>
+                <!-- Example single danger button -->
+                <div class="btn-group">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#f48f41; color:white">
+                        Tháng 9
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Tháng 9</a>
+                        <a class="dropdown-item" href="#">Tháng 10</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 text-right mr-0">
+            <p>Số lượng: </p>
+            <span></span>
+        </div>
+    </div>
+    <table class="table">
+        <tr>
+            <th scope="col">#</th>
+            <th>
+                Mã Voucher
+            </th>
+            <th>
+                Tên Voucher
+            </th>
+            <th>
+                Điều kiện
+            </th>
+            <th>
+                Ngày áp dụng
+            </th>
+            <th>
+                Ngày hết hạn
+            </th>
+            <th>
+                Trạng thái
+            </th>
+            <th></th>
+        </tr>
+        @{int a = 0;}
+        @foreach (var item in Model)
+        {
+            a++;
+            <tr>
+                <td>@a</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaVoucher)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenVoucher)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DieuKien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayApDung)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayHetHan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrangThai)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.MaVoucher }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.MaVoucher }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.MaVoucher })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

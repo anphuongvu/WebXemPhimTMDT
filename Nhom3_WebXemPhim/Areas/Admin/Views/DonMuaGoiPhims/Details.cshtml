@@ -5,71 +5,85 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Details</h2>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="calendar3" viewBox="0 0 16 16">
+        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
+        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+    </symbol>
+    <symbol id="geo-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z" />
+    </symbol>
+    <symbol id="cash-fill" viewBox="0 0 16 16">
+        <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+        <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z" />
+    </symbol>
+    <symbol id="person" viewBox="0 0 16 16">
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+    </symbol>
+    <symbol id="person-box" viewBox="0 0 16 16">
+        <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z" />
+        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+    </symbol>
+    <symbol id="bag-check" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+    </symbol>
+    <symbol id="bag-x" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM6.854 8.146a.5.5 0 1 0-.708.708L7.293 10l-1.147 1.146a.5.5 0 0 0 .708.708L8 10.707l1.146 1.147a.5.5 0 0 0 .708-.708L8.707 10l1.147-1.146a.5.5 0 0 0-.708-.708L8 9.293 6.854 8.146z" />
+    </symbol>
+</svg>
 
-<div>
-    <h4>DonMuaGoiPhim</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ThoiGian)
-        </dt>
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="col-md-12">
+            <h3>Theo dõi đơn mua phim</h3>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/Areas/Admin/assets/img/unsplash-photo-1.jpg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                            @if (Model.TrangThai.Value)
+                            {
+                                <div class="col-md-3">
+                                    <svg x="30%" y="30%" class="bi me-2" width="3em" height="3em" fill="#f59f5e"><use xlink:href="#bag-check" />
+                                    </svg>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="col-md-3">
+                                    <svg x="30%" y="30%" class="bi me-2" width="3em" height="3em" fill="#f59f5e">
+                                        <use xlink:href="#bag-x" />
+                                    </svg>
+                                </div>
+                            }
+                        </h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="2em" height="1em"><use xlink:href="#person-box" /></svg>
+                                <small>@Html.DisplayFor(model => model.TaiKhoan.Username) &emsp;</small>
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="2em" height="1em"><use xlink:href="#cash-fill" /></svg>
+                                <small>@Html.DisplayFor(model => model.TongTien) &emsp;</small>
+                            </li>
+                            <br />
+                            &emsp;
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="2em" height="1em"><use xlink:href="#geo-fill" /></svg>
+                                <small>Tp.Ho Chi Minh &emsp;</small>
+                            </li>
 
-        <dd>
-            @Html.DisplayFor(model => model.ThoiGian)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TongTien)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TongTien)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TrangThai)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TrangThai)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.GoiPhim.LoaiGoiPhim)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.GoiPhim.LoaiGoiPhim)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.KhachHang.TenKhachHang)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.KhachHang.TenKhachHang)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TaiKhoan.Username)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TaiKhoan.Username)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Voucher.TenVoucher)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Voucher.TenVoucher)
-        </dd>
-
-    </dl>
+                            <li class="d-flex align-items-center">
+                                &#9;
+                                <svg class="bi me-2" width="2em" height="1em"><use xlink:href="#calendar3" /></svg>
+                                <small>@Html.DisplayFor(model => model.ThoiGian) </small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MaDonMuaGoi }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

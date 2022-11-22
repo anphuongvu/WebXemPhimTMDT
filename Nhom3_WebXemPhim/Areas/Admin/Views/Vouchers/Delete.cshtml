@@ -1,0 +1,67 @@
+﻿@model Nhom3_WebXemPhim.Models.Voucher
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div style="margin:20px;">
+    <h2 style="margin: 0 auto; text-align:center; font-weight:500; color:#f48f41">Xóa Vourcher</h2>
+
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Tên Voucher
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TenVoucher)
+            </dd>
+
+            <dt>
+                Điều kiện
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DieuKien)
+            </dd>
+
+            <dt>
+                Ngày áp dụng
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NgayApDung)
+            </dd>
+
+            <dt>
+                Ngày hết hạn
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NgayHetHan)
+            </dd>
+
+            <dt>
+                Trạng thái
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TrangThai)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" style="width: 90px; height: 30px; background-color: #f48f41; align-content: center; text-align: center; border-radius: 5px; margin: 20px 0; color:white;"/> |
+                @Html.ActionLink("Quay lại", "Index")
+            </div>
+        }
+    </div>
+</div>
+

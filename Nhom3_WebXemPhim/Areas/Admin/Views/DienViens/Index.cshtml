@@ -5,36 +5,45 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Index</h2>
+<div style="margin:20px;">
+    <h2>Danh sách diễn viên</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TenDienVien)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ThongTin)
-        </th>
-        <th></th>
-    </tr>
+    <p>
+        @Html.ActionLink("Thêm mới", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                Tên diễn viên
+            </th>
+            <th>
+                Thông tin diễn viên
+            </th>
+            <th></th>
+        </tr>
+        @{ int i = 0;}
+        @foreach (var item in Model)
+        {
+            i++;
+            <tr>
+                <td>@i</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenDienVien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ThongTin)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaDienVien }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MaDienVien }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaDienVien })
+                </td>
+            </tr>
+        }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenDienVien)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ThongTin)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaDienVien }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaDienVien }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaDienVien })
-        </td>
-    </tr>
-}
+    </table>
+</div>
 
-</table>

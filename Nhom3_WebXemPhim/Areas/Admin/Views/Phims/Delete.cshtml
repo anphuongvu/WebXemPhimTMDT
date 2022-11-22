@@ -5,125 +5,129 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Delete</h2>
+<div style="margin:20px;">
+    <h2>Xóa</h2>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Phim</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.TenPhim)
-        </dt>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Phim</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TenPhim)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TenPhim)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.TenPhim)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TenDienVien)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.TenDienVien)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TenDienVien)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.TenDienVien)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.HinhAnhPhim)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.HinhAnhPhim)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.HinhAnhPhim)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.HinhAnhPhim)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MoTaPhim)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.MoTaPhim)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.MoTaPhim)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.MoTaPhim)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ThoiLuongPhim)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ThoiLuongPhim)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ThoiLuongPhim)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ThoiLuongPhim)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NamSanXuat)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.NamSanXuat)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.NamSanXuat)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.NamSanXuat)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LuotXem)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.LuotXem)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LuotXem)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.LuotXem)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DuongDanURL)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.DuongDanURL)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.DuongDanURL)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.DuongDanURL)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DonGia)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.DonGia)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.DonGia)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.DonGia)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.BanQuyenPhim.ChiTietHopDong)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.BanQuyenPhim.ChiTietHopDong)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.BanQuyenPhim.ChiTietHopDong)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.BanQuyenPhim.ChiTietHopDong)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.QuocGia.TenQuocGia)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.QuocGia.TenQuocGia)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.QuocGia.TenQuocGia)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.QuocGia.TenQuocGia)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TheLoai.TenTheLoai)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.TheLoai.TenTheLoai)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TheLoai.TenTheLoai)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.TheLoai.TenTheLoai)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Trailer.TenTrailer)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Trailer.TenTrailer)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Trailer.TenTrailer)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Trailer.TenTrailer)
+            </dd>
 
-    </dl>
+        </dl>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    }
+            <div class="form-actions no-color">
+                <input type="submit" value="Xóa" class="btn btn-default" /> |
+                @Html.ActionLink("Quay lại", "Index")
+            </div>
+        }
+    </div>
 </div>
+

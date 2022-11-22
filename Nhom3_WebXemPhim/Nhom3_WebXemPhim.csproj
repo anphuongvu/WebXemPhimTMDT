@@ -137,10 +137,12 @@
     <Compile Include="Areas\Admin\Controllers\LoaiTaiKhoansController.cs" />
     <Compile Include="Areas\Admin\Controllers\PhimsController.cs" />
     <Compile Include="Areas\Admin\Controllers\QuocGiasController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SearchController.cs" />
     <Compile Include="Areas\Admin\Controllers\TaiKhoansController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThanhToanController.cs" />
     <Compile Include="Areas\Admin\Controllers\TheLoaisController.cs" />
     <Compile Include="Areas\Admin\Controllers\TrailersController.cs" />
+    <Compile Include="Areas\Admin\Controllers\VouchersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -242,9 +244,15 @@
     <Content Include="Areas\Admin\assets\img\poster1.jpg" />
     <Content Include="Areas\Admin\assets\img\poster2.jpg" />
     <Content Include="Areas\Admin\assets\img\poster3.jpg" />
+    <Content Include="Areas\Admin\assets\img\unsplash-photo-1.jpg" />
+    <Content Include="Areas\Admin\assets\img\unsplash-photo-2.jpg" />
+    <Content Include="Areas\Admin\assets\img\unsplash-photo-3.jpg" />
     <Content Include="Areas\Admin\assets\img\wootteo.jpg" />
     <Content Include="Areas\Admin\assets\js\bootstrap.bundle.min.js" />
     <Content Include="Areas\Admin\assets\js\dashboard.js" />
+    <Content Include="Areas\Admin\assets\video\video0.mp4" />
+    <Content Include="Areas\Admin\assets\video\video1.mp4" />
+    <Content Include="Areas\Admin\assets\video\video2.mp4" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -336,6 +344,12 @@
     <Content Include="Areas\Admin\Views\KhachHangs\Details.cshtml" />
     <Content Include="Areas\Admin\Views\KhachHangs\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\KhachHangs\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Vouchers\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Vouchers\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Vouchers\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Vouchers\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Vouchers\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Search\TimKiem.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -364,7 +378,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\assets\video\" />
     <Folder Include="Areas\Admin\Data\" />
   </ItemGroup>
   <ItemGroup>
