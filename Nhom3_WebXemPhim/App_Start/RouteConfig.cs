@@ -14,10 +14,22 @@ namespace Nhom3_WebXemPhim
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                "AdminPage",
+                "Admin/{controller}/{action}",
+                new { area = "Admin", controller = "Home", action = "Index" },
+                new[] { typeof(Areas.Admin.Controllers.HomeController).Namespace }
+            );
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                new[] { "Nhom3_WebXemPhim.Controllers" }
             );
+            //routes.MapRoute(
+            //    name: "Default",
+            //    url: "{controller}/{action}/{id}",
+            //    defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            //);
         }
     }
 }
