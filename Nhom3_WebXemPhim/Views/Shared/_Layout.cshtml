@@ -3,37 +3,125 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <title>@ViewBag.Title - KATIAN</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <!-- BOX ICONS -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- APP CSS -->
+    <link href="~/assets/css/grid.css" rel="stylesheet" />
+    <link href="~/assets/css/app.css" rel="stylesheet" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="~/assets/img/">
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <!-- NAV -->
+    <div class="nav-wrapper">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <div class="nav">
+                <a href="#" class="logo">
+                    <!-- <i class='bx bx-movie-play bx-tada main-color'></i>Fl<span class="main-color">i</span>x -->
+                    <img src="~/assets/img/logo1.png" style="width: 180px; height: 70px; padding-top: 10px;" />
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Phim lẻ</a></li>
+                    <li><a href="#">Phim bộ</a></li>
+                    <li><a href="#">Mới & Mới nhất</a></li>
+                    <li>
+                        <a href="#" class="btn btn-hover">
+                            <span>Đăng ký gói</span>
+                        </a>
+                    </li>
                 </ul>
+                <!-- MOBILE MENU TOGGLE -->
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <div class="hamburger"></div>
+                </div>
             </div>
         </div>
     </div>
+    <!-- END NAV -->
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
+    <footer class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-6 col-sm-12">
+                    <div class="content">
+                        <a href="#" class="logo">
+                            <!-- <i class='bx bx-movie-play bx-tada main-color'></i>Fl<span class="main-color">i</span>x -->
+                            <img src="/assets/img/logo1.png" style="width: 180px; height: 75px; padding-top: 10px;">
+                        </a>
+                        <p>
+                            Đồ án môn Thương mại điện tử - Website Xem phim trực tuyến <br />
+                            Thành viên:<br />
+                            1. Vũ Phương An - 19DH110766<br />
+                            2. Trần Quốc Tú - 19DH110284<br />
+                            3. Lê Trương Thảo Uyên - 19DH110822
+                        </p>
+                        <div class="social-list">
+                            <a href="#" class="social-item">
+                                <i class="bx bxl-facebook"></i>
+                            </a>
+                            <a href="#" class="social-item">
+                                <i class="bx bxl-twitter"></i>
+                            </a>
+                            <a href="#" class="social-item">
+                                <i class="bx bxl-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-6 col-md-6 col-sm-6">
+                            <div class="content">
+                                <p><b>Katian</b></p>
+                                <ul class="footer-menu">
+                                    <li><a href="#">Giới thiệu</a></li>
+                                    <li><a href="#">Giá phim</a></li>
+                                    <li><a href="#">Liên hệ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6 col-sm-6">
+                            <div class="content">
+                                <p><b>Tải app</b></p>
+                                <ul class="footer-menu">
+                                    <li>
+                                        <a href="#">
+                                            <img src="~/assets/img/google-play.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="~/assets/img/app-store.png" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p style="margin: 40px;">&copy; @DateTime.Now.Year - KATIAN Website xem phim trực tuyến</p>
+    </footer>
+    <!-- SCRIPT -->
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- OWL CAROUSEL -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <!-- APP SCRIPT -->
+    <script src="~/assets/js/app.js"></script>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
