@@ -17,6 +17,7 @@ namespace Nhom3_WebXemPhim.Areas.Admin.Controllers
 
             List<Phim> phims = db.Phims.Where(ph => ph.TenPhim.Contains(searchValue) || ph.TenDienVien.Contains(searchValue)).OrderByDescending(ph => ph.NamSanXuat).Take(10).ToList();
 
+            ViewBag.phims = db.Phims.OrderByDescending(ph => ph.NamSanXuat).Take(3).ToList();
             return View(phims);
         }
     }
