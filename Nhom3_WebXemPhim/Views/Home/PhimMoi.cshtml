@@ -1,0 +1,219 @@
+﻿@model IEnumerable<Nhom3_WebXemPhim.Models.Phim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+<div class="container-fluid pb-3">
+
+    
+    <div class="row">
+        <div class="col-9">
+            <h4>Danh sách phim</h4>
+            <hr />
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="post col-5">
+                        <div class="post-thumbnail"><a href="/Phims/Details/@Html.DisplayFor(modelItem => item.MaPhim)"><img src="/Areas/Admin/assets/img/@Html.DisplayFor(modelItem => item.HinhAnhPhim)" height="250px;" width="100%;"></a></div>
+                        <div class="post-details">
+                            <div class="post-meta d-flex justify-content-between">
+                                <div class="date meta-last"> @Html.DisplayFor(modelItem => item.NamSanXuat.Value.Month) / @Html.DisplayFor(modelItem => item.NamSanXuat.Value.Year)</div>
+                                <div class="category"><a href="#">@Html.DisplayFor(modelItem => item.TheLoai.TenTheLoai)</a></div>
+                            </div>
+                            <a href="/Phims/Details/@Html.DisplayFor(modelItem => item.MaPhim)" class="nav_link"><h6 style="color:black">@Html.DisplayFor(modelItem => item.TenPhim)</h6></a>
+                            <footer class="post-footer d-flex align-items-center">
+                                <div class="avatar">
+                                    <svg class="bi me-2" width="2em" height="1em"><use xlink:href="#person" /></svg>
+                                </div>
+                                <a href="#" class="author d-flex align-items-center flex-wrap">
+
+                                    <div class="title">
+                                        <span>@Html.DisplayFor(modelItem => item.TenDienVien)</span>
+                                    </div>
+                                </a>
+                                <div class="avatar">
+                                    <svg class="bi me-2" width="2em" height="1em"><use xlink:href="#clock" /></svg>
+                                </div>
+                                <div class="title">
+                                    <span>@Html.DisplayFor(modelItem => item.ThoiLuongPhim)</span>
+                                </div>
+                                <div class="avatar">
+                                    <svg class="bi me-2" width="2em" height="1em"><use xlink:href="#eye" /></svg>
+                                </div>
+                                <div class="title">
+                                    <span>@Html.DisplayFor(modelItem => item.LuotXem) </span>
+                                </div>
+
+                                <div class="avatar">
+                                    <svg class="bi me-2" width="2em" height="1em"><use xlink:href="#chat" /></svg>
+                                </div>
+                                <div class="title">
+                                    <span>@Html.DisplayFor(modelItem => item.BinhLuans.Count)</span>
+                                </div>
+
+                            </footer>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="col-3">
+            @Html.Partial("_PartialSideView")
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- HERO SECTION -->
+    <div class="hero-section">
+        <!-- HERO SLIDE -->
+        <div class="hero-slide">
+            <div class="owl-carousel carousel-nav-center" id="hero-carousel">
+                <!-- SLIDE ITEM -->
+                <div class="hero-slide-item">
+                    <img src="~/assets/img/black-banner.png" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                Black Panther
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>120 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt non odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias ratione mollitia accusantium, facere ab suscipit.
+                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Xem ngay</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END SLIDE ITEM -->
+                <!-- SLIDE ITEM -->
+                <div class="hero-slide-item">
+                    <img src="~assets/img/supergirl-banner.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                Supergirl
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>120 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt non odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias ratione mollitia accusantium, facere ab suscipit.
+                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Xem ngay</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END SLIDE ITEM -->
+                <!-- SLIDE ITEM -->
+                <div class="hero-slide-item">
+                    <img src="~/assets/img/wanda-banner.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                Wanda Vision
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>120 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt non odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias ratione mollitia accusantium, facere ab suscipit.
+                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Xem ngay</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END SLIDE ITEM -->
+            </div>
+        </div>
+        <!-- END HERO SLIDE -->
+    </div>
+    <!-- END HERO SECTION -->
+    @*<div class="jumbotron">
+                <h1>ASP.NET</h1>
+                <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+                <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        </div>
+        <div class="row">
+             <div class="col-md-4">
+                    <h2>Getting started</h2>
+                    <p>
+                        ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                        enables a clean separation of concerns and gives you full control over markup
+                        for enjoyable, agile development.
+                    </p>
+                    <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+             </div>
+             <div class="col-md-4">
+                    <h2>Get more libraries</h2>
+                    <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+                    <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+             </div>
+             <div class="col-md-4">
+                    <h2>Web Hosting</h2>
+                    <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+                    <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+             </div>
+        </div>*@
+</div>

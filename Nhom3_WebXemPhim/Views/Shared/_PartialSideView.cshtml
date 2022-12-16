@@ -1,0 +1,49 @@
+﻿@using Nhom3_WebXemPhim.Models
+@{
+    Layout = null;
+    List<Phim> phims = (List<Phim>)ViewBag.phims;
+}
+
+<div class="widget latest-posts">
+    <header>
+        <h3 class="h6">Phim hay trong tuần</h3>
+    </header>
+    <div class="blog-posts">
+        @foreach (var item in phims)
+        {
+            <div class="post">
+                <div class="post-thumbnail"><a href="/Phims/Details/@Html.DisplayFor(modelItem => item.MaPhim)"><img src="/Areas/Admin/assets/img/@Html.DisplayFor(modelItem => item.HinhAnhPhim)" height="150px;" width="100%;"></a></div>
+                <div class="post-details">
+                    <div class="post-meta d-flex justify-content-between">
+                        <div class="date meta-last"> @Html.DisplayFor(modelItem => item.NamSanXuat.Value.Month) / @Html.DisplayFor(modelItem => item.NamSanXuat.Value.Year)</div>
+                        <div class="category"><a href="#">@Html.DisplayFor(modelItem => item.TheLoai.TenTheLoai)</a></div>
+                    </div>
+                    <a href="/Phims/Details/@Html.DisplayFor(modelItem => item.MaPhim)" class="nav_link"><h6 style="color:black">@Html.DisplayFor(modelItem => item.TenPhim)</h6></a>
+                    <footer class="post-footer d-flex align-items-center">
+                        <div class="avatar">
+                            <svg class="bi me-2" width="2em" height="1em"><use xlink:href="#clock" /></svg>
+                        </div>
+                        <div class="title">
+                            <span>@Html.DisplayFor(modelItem => item.ThoiLuongPhim)</span>
+                        </div>
+                        <div class="avatar">
+                            <svg class="bi me-2" width="2em" height="1em"><use xlink:href="#eye" /></svg>
+                        </div>
+                        <div class="title">
+                            <span>@Html.DisplayFor(modelItem => item.LuotXem) </span>
+                        </div>
+
+                        <div class="avatar">
+                            <svg class="bi me-2" width="2em" height="1em"><use xlink:href="#chat" /></svg>
+                        </div>
+                        <div class="title">
+                            <span>@Html.DisplayFor(modelItem => item.BinhLuans.Count)</span>
+                        </div>
+
+                    </footer>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

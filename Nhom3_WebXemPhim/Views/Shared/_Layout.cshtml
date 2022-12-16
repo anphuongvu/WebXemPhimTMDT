@@ -16,6 +16,7 @@
     <link href="~/assets/css/app.css" rel="stylesheet" />
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="~/assets/img/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     @*@Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")*@
 </head>
@@ -28,16 +29,23 @@
                     <!-- <i class='bx bx-movie-play bx-tada main-color'></i>Fl<span class="main-color">i</span>x -->
                     <img src="~/assets/img/logo1.png" style="width: 180px; height: 70px; padding-top: 10px;" />
                 </a>
+                
                 <ul class="nav-menu" id="nav-menu">
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Phim lẻ</a></li>
-                    <li><a href="#">Phim bộ</a></li>
-                    <li><a href="#">Mới & Mới nhất</a></li>
+                    <li><a href="/Home">Trang chủ</a></li>
+                    <li><a href="/Phims/PhimLe">Phim lẻ</a></li>
+                    <li><a href="/Phims/PhimBo">Phim bộ</a></li>
+                    <li><a href="/Home/PhimMoi">Mới & Mới nhất</a></li>
                     <li>
                         <a href="#" class="btn btn-hover">
                             <span>Đăng ký gói</span>
                         </a>
                     </li>
+                    <form class="form-inline my-2 my-lg-0" action="/Search/TimKiem" method="post">
+                        <input class="form-control mr-sm-2" id="searchValue" name="searchValue" type="search" placeholder="Nhập nội dung cần tìm" aria-label="Tìm kiếm">
+                        <button class="btn btn-warning" type="submit" id="btnSearch" style="background-color:#f48f41">
+                            <i class='bx bx-search' style="color:white"></i>
+                        </button>
+                    </form>
                 </ul>
                 <!-- MOBILE MENU TOGGLE -->
                 <div class="hamburger-menu" id="hamburger-menu">
@@ -119,6 +127,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- OWL CAROUSEL -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- APP SCRIPT -->
     <script src="~/assets/js/app.js"></script>
 

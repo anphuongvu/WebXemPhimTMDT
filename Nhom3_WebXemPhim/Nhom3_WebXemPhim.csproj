@@ -137,13 +137,14 @@
     <Compile Include="Areas\Admin\Controllers\LoaiTaiKhoansController.cs" />
     <Compile Include="Areas\Admin\Controllers\PhimsController.cs" />
     <Compile Include="Areas\Admin\Controllers\QuocGiasController.cs" />
-    <Compile Include="Areas\Admin\Controllers\SearchController.cs" />
     <Compile Include="Areas\Admin\Controllers\TaiKhoansController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThanhToanController.cs" />
     <Compile Include="Areas\Admin\Controllers\TheLoaisController.cs" />
     <Compile Include="Areas\Admin\Controllers\TrailersController.cs" />
     <Compile Include="Areas\Admin\Controllers\VouchersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PhimsController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -415,6 +416,15 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Phims\Details.cshtml" />
+    <Content Include="Views\Phims\Index.cshtml" />
+    <Content Include="Views\Phims\PhimBanQuyen.cshtml" />
+    <Content Include="Views\Phims\PhimBo.cshtml" />
+    <Content Include="Views\Phims\PhimFree.cshtml" />
+    <Content Include="Views\Phims\PhimLe.cshtml" />
+    <Content Include="Views\Search\TimKiem.cshtml" />
+    <Content Include="Views\Shared\_PartialSideView.cshtml" />
+    <Content Include="Views\Home\PhimMoi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
