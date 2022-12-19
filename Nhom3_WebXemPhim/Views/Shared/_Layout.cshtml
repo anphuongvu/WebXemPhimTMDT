@@ -19,6 +19,99 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     @*@Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")*@
+    <style>
+        .btn {
+            color: #ffffff;
+            padding: 0.25rem 1rem;
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 700;
+            display: inline-flex;
+            position: relative;
+            align-items: center;
+        }
+
+        .btn-hover::before {
+            z-index: 1;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background-color: var(--main-color);
+            transition: 0.3s ease-in-out;
+        }
+
+        .btn-hover:hover::before {
+            width: 100%;
+        }
+
+        .btn i,
+        .btn span {
+            z-index: 1;
+        }
+
+        .btn i {
+            margin-right: 1rem;
+        }
+
+        .hamburger-menu {
+            --size: 30px;
+            height: var(--size);
+            width: var(--size);
+            cursor: pointer;
+            z-index: 101;
+            position: relative;
+            display: none;
+            align-items: center;
+        }
+
+        .hamburger {
+            position: relative;
+        }
+
+            .hamburger,
+            .hamburger::before,
+            .hamburger::after {
+                width: var(--size);
+                height: 3px;
+                border-radius: 0.5rem;
+                background-color: var(--text-color);
+                transition: 0.4s;
+            }
+
+                .hamburger::before,
+                .hamburger::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                }
+
+                .hamburger::before {
+                    top: -10px;
+                }
+
+                .hamburger::after {
+                    bottom: -10px;
+                }
+
+        .hamburger-menu.active .hamburger {
+            background-color: transparent;
+        }
+
+            .hamburger-menu.active .hamburger::before {
+                transform-origin: top left;
+                transform: rotate(45deg);
+                left: 6px;
+            }
+
+            .hamburger-menu.active .hamburger::after {
+                transform-origin: bottom left;
+                transform: rotate(-45deg);
+                left: 6px;
+            }
+    </style>
 </head>
 <body>
     <!-- NAV -->
@@ -29,7 +122,7 @@
                     <!-- <i class='bx bx-movie-play bx-tada main-color'></i>Fl<span class="main-color">i</span>x -->
                     <img src="~/assets/img/logo1.png" style="width: 180px; height: 70px; padding-top: 10px;" />
                 </a>
-                
+
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="/Home">Trang chủ</a></li>
                     <li><a href="/Phims/PhimLe">Phim lẻ</a></li>
@@ -46,7 +139,11 @@
                             <i class='bx bx-search' style="color:white"></i>
                         </button>
                     </form>
+                    <li>
+                        <a href="#" class="btn btn-hover"><span>Đăng nhập</span></a>
+                    </li>
                 </ul>
+                
                 <!-- MOBILE MENU TOGGLE -->
                 <div class="hamburger-menu" id="hamburger-menu">
                     <div class="hamburger"></div>
@@ -55,7 +152,7 @@
         </div>
     </div>
     <!-- END NAV -->
-    <div class="container body-content">
+    <div class="container body-content" style="margin-top:20px">
         @RenderBody()
     </div>
     <footer class="section">
@@ -67,7 +164,7 @@
                             <!-- <i class='bx bx-movie-play bx-tada main-color'></i>Fl<span class="main-color">i</span>x -->
                             <img src="/assets/img/logo1.png" style="width: 180px; height: 75px; padding-top: 10px;">
                         </a>
-                        <p>
+                        <p style="color: white">
                             Đồ án môn Thương mại điện tử - Website Xem phim trực tuyến <br />
                             Thành viên:<br />
                             1. Vũ Phương An - 19DH110766<br />
@@ -91,17 +188,17 @@
                     <div class="row">
                         <div class="col-6 col-md-6 col-sm-6">
                             <div class="content">
-                                <p><b>Katian</b></p>
+                                <p style="color: white"><b>Katian</b></p>
                                 <ul class="footer-menu">
-                                    <li><a href="#">Giới thiệu</a></li>
-                                    <li><a href="#">Giá phim</a></li>
-                                    <li><a href="#">Liên hệ</a></li>
+                                    <li><a href="#" style="color: white">Giới thiệu</a></li>
+                                    <li><a href="#"style="color: white">Giá phim</a></li>
+                                    <li><a href="#"style="color: white">Liên hệ</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-6 col-md-6 col-sm-6">
                             <div class="content">
-                                <p><b>Tải app</b></p>
+                                <p style="color: white"><b>Tải app</b></p>
                                 <ul class="footer-menu">
                                     <li>
                                         <a href="#">
@@ -120,7 +217,7 @@
                 </div>
             </div>
         </div>
-        <p style="margin: 40px;">&copy; @DateTime.Now.Year - KATIAN Website xem phim trực tuyến</p>
+        <p style="margin: 70px; color: white">&copy; @DateTime.Now.Year - KATIAN Website xem phim trực tuyến</p>
     </footer>
     <!-- SCRIPT -->
     <!-- JQUERY -->
