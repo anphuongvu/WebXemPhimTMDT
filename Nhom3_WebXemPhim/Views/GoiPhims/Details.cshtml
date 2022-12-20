@@ -1,0 +1,135 @@
+﻿@model Nhom3_WebXemPhim.Models.GoiPhim
+
+@{
+    ViewBag.Title = "Trang thanh toán";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<br>
+
+<h2>Trang thanh toán</h2>
+@{
+    double gia = (double)Model.DonGia;
+    double dc = (double)Model.DonGia * 0.2;
+    double tong = dc + (double)Model.DonGia;
+}
+<div class="container d-lg-flex">
+    <div class="box-1 bg-light user">
+        <div class="d-flex align-items-center mb-3">
+            <img src="https://images.pexels.com/photos/4925916/pexels-photo-4925916.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" class="pic rounded-circle" alt="">
+            <p class="ps-2 name">Oliur</p>
+        </div>
+        <div class="box-inner-1 pb-3 mb-3 ">
+            <div class="d-flex justify-content-between mb-3 userdetails">
+                <p class="fw-bold">@Html.DisplayFor(model => model.LoaiGoiPhim)</p>
+                <p class="fw-lighter"><span class="fas fa-dollar-sign"></span>@gia　VND</p>
+            </div>
+            <div id="my" class="carousel slide carousel-fade img-details" data-bs-ride="carousel" data-bs-interval="2000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#my" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button> <button type="button" data-bs-target="#my" data-bs-slide-to="1" aria-label="Slide 2"></button> <button type="button" data-bs-target="#my" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active"> <img src="https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" class="d-block w-100"> </div> <div class="carousel-item"> <img src="https://images.pexels.com/photos/270694/pexels-photo-270694.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100"> </div> <div class="carousel-item"> <img src="https://images.pexels.com/photos/7974/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500" class="d-block w-100"> </div>
+                </div>
+
+            </div>
+            <p class="dis my-3 info">Lợi ích: Bạn sẽ được tham gia @Html.DisplayFor(model => model.LoaiGoiPhim). </p>
+            <p class="dis mb-3 updates">Miễn phí xem phím trong 1 tháng.</p>
+            <p class="dis mb-3 updates">Không bị quảng cáo khi xem phim.</p>
+            <p class="dis mb-3 different">Bạn sẽ nhận được email thông báo gia hạn khi sắp hết hạn gói.</p>
+        </div>
+    </div>
+    <div class="box-2">
+        <div class="box-inner-2">
+            <div>
+                <p class="fw-bold">Chi tiết thanh toán</p>
+                <p class="dis mb-3">Vui lòng điền thông tin chi tiết của bạn để tiến hành thanh toán.</p>
+            </div>
+            <form action="/GoiPhims/ThanhToan" method="post">
+                <div class="mb-3">
+                    <p class="dis fw-bold mb-2">Email</p>
+                    <input class="form-control" type="email" value="">
+                </div>
+                <div>
+                    <p class="dis fw-bold mb-2">Thông tin thẻ</p>
+                    <div class="d-flex align-items-center justify-content-between card-atm border rounded">
+                        <div class="fab fa-cc-visa ps-3"></div>
+                        <input type="text" class="form-control" placeholder="Số thẻ">
+                        <div class="d-flex w-50">
+                            <input type="text" class="form-control px-0" placeholder="MM/YY">
+                            <input type="password" maxlength=3 class="form-control px-0" placeholder="CVV">
+                        </div>
+                    </div>
+                    <div class="my-3 cardname">
+                        <p class="dis fw-bold mb-2">Tên chủ thẻ</p>
+                        <input class="form-control" type="text">
+                    </div>
+                    <div class="address">
+                        <p class="dis fw-bold mb-3">Địa chỉ hóa đơn</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected hidden>Việt Nam</option>
+                            <option value="1">Mỹ</option>
+                            <option value="2">Australia</option>
+                            <option value="3">Canada</option>
+                        </select>
+                        <div class="d-flex">
+                            <input class="form-control zip" type="text" placeholder="ZIP">
+                            <input class="form-control state" type="text" placeholder="Thành phố">
+                        </div>
+                        <hr />
+                        <input type="number" id="tongtien" name="tongtien" class="d-none" value="@tong">
+                        <input type="number" id="MaGoiPhim" name="MaGoiPhim" class="d-none" value="@Html.DisplayFor(model => model.MaGoiPhim)">
+                        <input type="number" id="MaTaiKhoan" name="MaTaiKhoan" class="d-none" value="1">
+                        <div class="d-flex flex-column dis">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <p>Subtotal</p>
+                                <p><span class="fas fa-dollar-sign"></span>@gia VND</p>
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between mb-2"> <p>VAT<span>(20%)</span></p> <p><span class="fas fa-dollar-sign"></span>@dc</p> </div>
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <p class="fw-bold">Tổng</p>
+                                <p class="fw-bold"><span class="fas fa-dollar-sign"></span>@tong VND</p>
+                            </div>
+                            <button type="submit" style="border: 0px;"><div class="btn btn-primary mt-2">Pay<span class="fas fa-dollar-sign px-1"></span>@tong VND</div></button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    var valcode = document.querySelector("#discount")
+    var namecode = document.querySelector("#code")
+    namecode.textContent = valcode.value
+
+    var closeBtn = document.querySelector(".close")
+    var couponCode = document.querySelector(".couponCode")
+    closeBtn.addEventListener("click", function () {
+        close()
+    })
+    valcode.addEventListener("change", function () {
+        checkDiscountCoupon()
+    })
+
+    function checkDiscountCoupon() {
+        if (valcode.value.length === 0) {
+            // namecode.style.display = "none"
+            close()
+        }
+        else {
+            couponCode.classList.remove("d-none")
+            namecode.style.display = "inline"
+            namecode.textContent = valcode.value
+        }
+    }
+
+    function close() {
+        couponCode.classList.add("d-none")
+        valcode.value = ""
+    }
+</script>

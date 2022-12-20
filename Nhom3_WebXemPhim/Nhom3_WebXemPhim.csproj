@@ -142,6 +142,7 @@
     <Compile Include="Areas\Admin\Controllers\TheLoaisController.cs" />
     <Compile Include="Areas\Admin\Controllers\TrailersController.cs" />
     <Compile Include="Areas\Admin\Controllers\VouchersController.cs" />
+    <Compile Include="Controllers\GoiPhimsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PhimsController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
@@ -425,11 +426,12 @@
     <Content Include="Views\Search\TimKiem.cshtml" />
     <Content Include="Views\Shared\_PartialSideView.cshtml" />
     <Content Include="Views\Home\PhimMoi.cshtml" />
+    <Content Include="Views\GoiPhims\Index.cshtml" />
+    <Content Include="Views\GoiPhims\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Views\LoginUser\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
