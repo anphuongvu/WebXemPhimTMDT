@@ -37,7 +37,7 @@ img {
     color: var(--main-color);
 }
 
-.container {
+.containers {
     max-width: 1920px;
     padding: 0 0px;
     margin: 0;

@@ -12,7 +12,7 @@ namespace Nhom3_WebXemPhim.Controllers
         private QLXemPhimEntities db = new QLXemPhimEntities();
         public ActionResult Index()
         {
-            return View();
+            return View(db.Phims.ToList());
         }
 
         public ActionResult PhimMoi()

@@ -25,7 +25,12 @@ namespace Nhom3_WebXemPhim.Models
             this.KhachHangs = new HashSet<KhachHang>();
             this.LichSuXemPhims = new HashSet<LichSuXemPhim>();
         }
-    
+        public TaiKhoan(short MaTaiKhoan, string Username, string Password)
+        {
+            this.MaTaiKhoan= MaTaiKhoan;
+            this.Username= Username;
+            this.Password= Password;   
+        }
         public short MaTaiKhoan { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
