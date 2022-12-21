@@ -135,6 +135,7 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\KhachHangsController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoaiTaiKhoansController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\PhimsController.cs" />
     <Compile Include="Areas\Admin\Controllers\QuocGiasController.cs" />
     <Compile Include="Areas\Admin\Controllers\TaiKhoansController.cs" />
@@ -144,6 +145,7 @@
     <Compile Include="Areas\Admin\Controllers\VouchersController.cs" />
     <Compile Include="Controllers\GoiPhimsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NguoiDungController.cs" />
     <Compile Include="Controllers\PhimsController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
@@ -241,6 +243,7 @@
   <ItemGroup>
     <Content Include="Areas\Admin\assets\css\bootstrap.min.css" />
     <Content Include="Areas\Admin\assets\css\styleAdmin.css" />
+    <Content Include="Areas\Admin\assets\img\log.svg" />
     <Content Include="Areas\Admin\assets\img\phim1.jpg" />
     <Content Include="Areas\Admin\assets\img\phim2.jpg" />
     <Content Include="Areas\Admin\assets\img\poster1.jpg" />
@@ -268,6 +271,7 @@
     <Content Include="assets\img\cartoons\your-name.jpg" />
     <Content Include="assets\img\favicon.ico" />
     <Content Include="assets\img\google-play.png" />
+    <Content Include="assets\img\log.svg" />
     <Content Include="assets\img\logo1.png" />
     <Content Include="assets\img\logo1.svg" />
     <Content Include="assets\img\movies\bat-man.jpg" />
@@ -392,6 +396,7 @@
     <Content Include="Areas\Admin\Views\Search\TimKiem.cshtml" />
     <Content Include="assets\img\series\the-falcon.webp" />
     <Content Include="assets\img\series\wanda.webp" />
+    <Content Include="Areas\Admin\Views\Login\DangNhap.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -428,6 +433,8 @@
     <Content Include="Views\Home\PhimMoi.cshtml" />
     <Content Include="Views\GoiPhims\Index.cshtml" />
     <Content Include="Views\GoiPhims\Details.cshtml" />
+    <Content Include="Views\NguoiDung\DangKy.cshtml" />
+    <Content Include="Views\NguoiDung\DangNhap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
